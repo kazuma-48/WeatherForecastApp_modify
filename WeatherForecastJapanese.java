@@ -169,18 +169,6 @@ public class WeatherForecastJapanese {
         homeCard.add(titleLabel);
         homeCard.add(Box.createVerticalStrut(18));
 
-        // 日本地図画像（存在する場合のみ）
-        String japanMap = "image/cd1f65b4-88c3-4750-b086-913bc4a34136.jpg";
-        if (new java.io.File(japanMap).exists()) {
-            ImageIcon icon = new ImageIcon(japanMap);
-            int imgW = 180, imgH = icon.getIconHeight() * imgW / icon.getIconWidth();
-            Image scaled = icon.getImage().getScaledInstance(imgW, imgH, Image.SCALE_SMOOTH);
-            JLabel imgLabel = new JLabel(new ImageIcon(scaled));
-            imgLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-            homeCard.add(imgLabel);
-            homeCard.add(Box.createVerticalStrut(10));
-        }
-
         // 占いパネル
         JPanel uranaiPanel = new JPanel();
         uranaiPanel.setLayout(new BoxLayout(uranaiPanel, BoxLayout.Y_AXIS));
